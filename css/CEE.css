@@ -1,11 +1,24 @@
-#ptest {
-  color: purple;
-  margin-top: 100px;
+#houseLogo {
+  padding-bottom: 20%;
 }
 
-.background-Image {
+#cee-logo {
+  width: 12em;
+  height: 100%;
+}
+
+#LogoDiv {
   margin-top: 80px;
-  background-image: url("../project-Images/CEEproject/HS2.jpg");
+}
+
+.carousel-fade .carousel-item {
+  opacity: 0.1;
+  transition-duration: 2s;
+  transition-property: opacity;
+}
+
+#CEEcarouselSlide {
+  background-color: lightgray;
   width: 100%;
   height: 100%;
   background-repeat: no-repeat;
@@ -13,11 +26,11 @@
   background-position: center center;
 }
 
-#cee-logo {
-  margin-top: 5%;
-  margin-bottom: 25%;
-  width: 20%;
-  height: 45%;
+#divStripe {
+  background-color: yellowgreen;
+  width: 100%;
+  height: 2em;
+  margin-top: 1em;
 }
 
 /*# sourceMappingURL=CEE.css.map */

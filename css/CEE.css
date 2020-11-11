@@ -29,8 +29,57 @@
 #divStripe {
   background-color: yellowgreen;
   width: 100%;
-  height: 2em;
+  height: 2.5em;
   margin-top: 1em;
+}
+
+@media screen and (max-width: 768px) {
+  .iconsText {
+    margin-left: 4em;
+  }
+
+  .iconOP {
+    margin-left: 2em;
+  }
+}
+.iconDiv:hover {
+  background-color: lightgray;
+}
+
+.iconLink {
+  color: black;
+  display: block;
+  position: relative;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: auto;
+}
+
+.iconLink:hover {
+  text-decoration: none;
+  color: black;
+  background-color: lightgray;
+}
+
+.MisVis {
+  color: black;
+  background-color: transparent;
+}
+
+.MisVis:hover {
+  text-decoration: none;
+}
+
+@media screen and (max-width: 768px) {
+  .MisVis {
+    display: block;
+    width: 100%;
+  }
+}
+#socialMedia {
+  margin-left: 2em;
+  margin-bottom: 2em;
 }
 
 /*# sourceMappingURL=CEE.css.map */

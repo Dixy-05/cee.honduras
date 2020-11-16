@@ -3,27 +3,12 @@
 }
 
 #cee-logo {
-  width: 12em;
-  height: 100%;
+  width: 10em;
+  height: 13em;
 }
 
 #LogoDiv {
-  margin-top: 80px;
-}
-
-.carousel-fade .carousel-item {
-  opacity: 0.1;
-  transition-duration: 2s;
-  transition-property: opacity;
-}
-
-#CEEcarouselSlide {
-  background-color: lightgray;
-  width: 100%;
-  height: 100%;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center center;
+  margin-top: 4.5em;
 }
 
 #divStripe {
@@ -62,21 +47,59 @@
   background-color: lightgray;
 }
 
-.MisVis {
-  color: black;
-  background-color: transparent;
-}
+@media screen and (max-width: 500px) {
+  #LogoDiv {
+    height: 17em;
+  }
 
-.MisVis:hover {
-  text-decoration: none;
-}
+  #SchoolName {
+    font-size: 0.8em;
+  }
 
-@media screen and (max-width: 768px) {
-  .MisVis {
-    display: block;
+  #NameTranslation {
+    font-size: 1.5em;
+  }
+
+  #cee-logo {
+    width: 7em;
+    height: 9em;
+  }
+
+  #divStripe {
+    background-color: yellowgreen;
     width: 100%;
+    height: 1.5em;
+    margin-bottom: 0;
+  }
+
+  .MVbuttons {
+    height: 1em;
+  }
+
+  .MVtext {
+    margin-top: 1em;
   }
 }
+@media screen and (min-width: 500px) {
+  #CEEcarouselSlide {
+    width: 100%;
+    height: 25em;
+  }
+
+  .carousel-Image {
+    width: 100%;
+    height: 25em;
+  }
+}
+.slide-caption {
+  font-size: 1em;
+}
+
+.carousel-caption {
+  top: 0;
+  bottom: auto;
+}
+
 #socialMedia {
   margin-left: 2em;
   margin-bottom: 2em;

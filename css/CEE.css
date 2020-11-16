@@ -57,7 +57,7 @@
   }
 
   #NameTranslation {
-    font-size: 1.5em;
+    font-size: 1.2em;
   }
 
   #cee-logo {
@@ -73,22 +73,40 @@
   }
 
   .MVbuttons {
-    height: 1em;
+    height: 0.9em;
   }
 
   .MVtext {
     margin-top: 1em;
   }
+
+  .buttonText {
+    font-size: 0.8em;
+  }
 }
-@media screen and (min-width: 500px) {
+@media screen and (min-width: 800px) {
   #CEEcarouselSlide {
-    width: 100%;
+    width: 80%;
     height: 25em;
+    margin: auto;
   }
 
   .carousel-Image {
     width: 100%;
     height: 25em;
+  }
+}
+@media screen and (max-width: 300px) {
+  .MVbuttons {
+    display: none;
+  }
+
+  #divStripe {
+    margin-top: 2em;
+  }
+
+  .MVtext {
+    margin-top: 1.7em;
   }
 }
 .slide-caption {
@@ -103,6 +121,13 @@
 #socialMedia {
   margin-left: 2em;
   margin-bottom: 2em;
+}
+
+.carousel-inner .carousel-item {
+  -webkit-transition-duration: 2s;
+  -moz-transition-duration: 2s;
+  -o-transition-duration: 2s;
+  transition-duration: 2s;
 }
 
 /*# sourceMappingURL=CEE.css.map */

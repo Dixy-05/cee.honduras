@@ -36,59 +36,97 @@
     </style>
     <style>
       .dropdown-item:hover {
-        background-color: yellowgreen;
+        background-color: whitesmoke;
+        font-weight: 500;
       }
       .nav-link,
       .navbar-brand {
         font-size: 1em;
       }
+      .dropdown-toggle::after {
+        display: none;
+      }
     </style>
   </head>
 
   <body>
-    <nav class="navbar navbar-dark bg-dark navbar-expand-md fixed-top">
+    <nav class="navbar navbar-expand-md fixed-top">
       <a href="https://ceehonduras.org/index.php" class="navbar-brand">
-        <!-- <span
-          ><img
-            href="https://ceehonduras.org/index.php"
-            style="height: 2em"
-            src="../project-images/CEEproject/CEElogo.png"
-        /></span> -->
-        <span style="font-size: 1.2em">CEE</span>
+        <span id="ceebrand" style="font-size: 1.2em; color: white">CEE</span>
       </a>
 
       <button
         class="navbar-toggler"
         data-toggle="collapse"
         data-target="#navbarCollapse"
+        style="color: white"
       >
-        Menu
-        <span class="navbar-toggler-icon"></span>
+        <div class="d-flex flex-row">
+          <span class="mr-2 mt-1">Menu</span>
+          <span id="hamburger-icon">
+            <div class="hamburger-icon"></div>
+            <div class="hamburger-icon"></div>
+            <div class="hamburger-icon"></div>
+          </span>
+        </div>
       </button>
 
       <div class="collapse navbar-collapse" id="navbarCollapse">
         <ul class="navbar-nav m-auto">
-          <li class="navbar-item">
-            <a class="nav-link"
-              ><svg
-                id="houseLogo"
-                width="2em"
-                height="2em"
+          <li class="navbar-item mt-0">
+            <span class="nav-link">
+              <a href="https://ceehonduras.org/index.php">
+                <svg
+                  id="houseLogo"
+                  width="2em"
+                  height="2em"
+                  viewBox="0 0 16 16"
+                  class="bi bi-house-door"
+                  fill="currentColor"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M7.646 1.146a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 .146.354v7a.5.5 0 0 1-.5.5H9.5a.5.5 0 0 1-.5-.5v-4H7v4a.5.5 0 0 1-.5.5H2a.5.5 0 0 1-.5-.5v-7a.5.5 0 0 1 .146-.354l6-6zM2.5 7.707V14H6v-4a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 .5.5v4h3.5V7.707L8 2.207l-5.5 5.5z"
+                  />
+                  <path
+                    fill-rule="evenodd"
+                    d="M13 2.5V6l-2-2V2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5z"
+                  /></svg></a
+            ></span>
+          </li>
+
+          <li class="navbar-item dropdown">
+            <a
+              id="LanguageNavbar"
+              class="nav-link dropdown-toggle"
+              href="https://ceehonduras.org/ourhistoryc47.php"
+              aria-haspopup="true"
+              aria-expanded="false"
+              data-toggle="dropdown"
+            >
+              <svg
+                width="1.5em"
+                height="1.5em"
                 viewBox="0 0 16 16"
-                class="bi bi-house-door"
+                class="bi bi-globe"
                 fill="currentColor"
                 xmlns="http://www.w3.org/2000/svg"
               >
                 <path
                   fill-rule="evenodd"
-                  d="M7.646 1.146a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 .146.354v7a.5.5 0 0 1-.5.5H9.5a.5.5 0 0 1-.5-.5v-4H7v4a.5.5 0 0 1-.5.5H2a.5.5 0 0 1-.5-.5v-7a.5.5 0 0 1 .146-.354l6-6zM2.5 7.707V14H6v-4a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 .5.5v4h3.5V7.707L8 2.207l-5.5 5.5z"
+                  d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm7.5-6.923c-.67.204-1.335.82-1.887 1.855A7.97 7.97 0 0 0 5.145 4H7.5V1.077zM4.09 4H2.255a7.025 7.025 0 0 1 3.072-2.472 6.7 6.7 0 0 0-.597.933c-.247.464-.462.98-.64 1.539zm-.582 3.5h-2.49c.062-.89.291-1.733.656-2.5H3.82a13.652 13.652 0 0 0-.312 2.5zM4.847 5H7.5v2.5H4.51A12.5 12.5 0 0 1 4.846 5zM8.5 5v2.5h2.99a12.495 12.495 0 0 0-.337-2.5H8.5zM4.51 8.5H7.5V11H4.847a12.5 12.5 0 0 1-.338-2.5zm3.99 0V11h2.653c.187-.765.306-1.608.338-2.5H8.5zM5.145 12H7.5v2.923c-.67-.204-1.335-.82-1.887-1.855A7.97 7.97 0 0 1 5.145 12zm.182 2.472a6.696 6.696 0 0 1-.597-.933A9.268 9.268 0 0 1 4.09 12H2.255a7.024 7.024 0 0 0 3.072 2.472zM3.82 11H1.674a6.958 6.958 0 0 1-.656-2.5h2.49c.03.877.138 1.718.312 2.5zm6.853 3.472A7.024 7.024 0 0 0 13.745 12H11.91a9.27 9.27 0 0 1-.64 1.539 6.688 6.688 0 0 1-.597.933zM8.5 12h2.355a7.967 7.967 0 0 1-.468 1.068c-.552 1.035-1.218 1.65-1.887 1.855V12zm3.68-1h2.146c.365-.767.594-1.61.656-2.5h-2.49a13.65 13.65 0 0 1-.312 2.5zm2.802-3.5h-2.49A13.65 13.65 0 0 0 12.18 5h2.146c.365.767.594 1.61.656 2.5zM11.27 2.461c.247.464.462.98.64 1.539h1.835a7.024 7.024 0 0 0-3.072-2.472c.218.284.418.598.597.933zM10.855 4H8.5V1.077c.67.204 1.335.82 1.887 1.855.173.324.33.682.468 1.068z"
                 />
-                <path
-                  fill-rule="evenodd"
-                  d="M13 2.5V6l-2-2V2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5z"
-                /></svg
-            ></a>
+              </svg>
+
+              Language</a
+            >
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+              <a class="dropdown-item" href="ourmision">English</a>
+              <a class="dropdown-item" href="ourmision">Spanish</a>
+            </div>
           </li>
+
           <li class="navbar-item dropdown">
             <a
               class="nav-link dropdown-toggle"
@@ -104,7 +142,7 @@
                 href="https://ceehonduras.org/ourhistoryc47.php"
                 >General information</a
               >
-              <a class="dropdown-item" href="ourmision">Our Mision</a>
+              <a class="dropdown-item" href="ourmision">Our Mission</a>
               <a class="dropdown-item" href="ourmision">Current Staff</a>
               <a class="dropdown-item" href="ourmision">Board of directors</a>
             </div>
@@ -180,8 +218,16 @@
               >Contact Us</a
             >
             <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-              <a class="dropdown-item" href="ourmision">Email</a>
-              <a class="dropdown-item" href="ourmision">Phones</a>
+              <a
+                class="dropdown-item"
+                href="../Contact-us/contact-us-src/contact-us.html"
+                >Email</a
+              >
+              <a
+                class="dropdown-item"
+                href="../Contact-us/contact-us-src/contact-us.html"
+                >Phone Number</a
+              >
               <a
                 class="dropdown-item"
                 target="_blank"
@@ -202,9 +248,12 @@
         </ul>
       </div>
     </nav>
-
-    <div id="LogoDiv" class="row">
-      <div class="col-sm-4 col-md-3 d-flex justify-content-center">
+    <div id="Logo-name-Div" class="row d-flex flex-md-row flex-sm-row">
+      <div
+        id="LogoDiv"
+        style="background-color: green"
+        class="col-5 col-md-3 d-flex justify-content-center"
+      >
         <img
           class="img-responsive"
           id="cee-logo"
@@ -213,120 +262,66 @@
         />
       </div>
       <div
-        class="col-sm-8 col-md-6 d-flex align-items-center justify-content-center flex-column"
-        id="SchoolName"
+        id="name-and-translation"
+        class="col-7 col-md-7 d-flex align-items-center justify-content-center flex-column"
       >
-        <h2 style="font-size: 2em; text-align: center">
+        <h2 style="text-align: center" id="SchoolName">
           Comunidad Educativa Evangélica
         </h2>
         <h4 style="text-align: center" id="NameTranslation">
           (Siguatepeque Bilingual Christian School)
         </h4>
       </div>
+
       <div
-        class="col-sm-12 col-md-3 d-flex flex-md-column flex-sm-row justify-content-around align-self-md-center"
+        id="LanguageDiv"
+        class="col-sm-0 col-md-1 d-flex flex-column justify-content-center align-items-center"
       >
-        <p>
+        <div class="dropdown show">
           <a
-            class="btn btn-link buttonsP"
+            id="languageIcon"
+            class="btn btn-link dropdown-toggle"
             href="#"
             role="button"
+            id="dropdownMenuLink"
+            data-toggle="dropdown"
+            aria-haspopup="true"
             aria-expanded="false"
-            aria-controls="collapseVision"
-          >
-            <span class="buttonText">Español/English</span>
-          </a>
-        </p>
-
-        <p>
-          <a
-            class="btn btn-primary"
-            data-toggle="collapse"
-            href="#collapseMission"
-            role="button"
-            aria-expanded="false"
-            aria-controls="collapseMission"
           >
             <svg
               width="1.5em"
               height="1.5em"
               viewBox="0 0 16 16"
-              class="bi bi-bookmark-check MVbuttons"
+              class="bi bi-globe"
               fill="currentColor"
               xmlns="http://www.w3.org/2000/svg"
             >
               <path
                 fill-rule="evenodd"
-                d="M2 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v13.5a.5.5 0 0 1-.777.416L8 13.101l-5.223 2.815A.5.5 0 0 1 2 15.5V2zm2-1a1 1 0 0 0-1 1v12.566l4.723-2.482a.5.5 0 0 1 .554 0L13 14.566V2a1 1 0 0 0-1-1H4z"
-              />
-              <path
-                fill-rule="evenodd"
-                d="M10.854 5.146a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7.5 7.793l2.646-2.647a.5.5 0 0 1 .708 0z"
+                d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm7.5-6.923c-.67.204-1.335.82-1.887 1.855A7.97 7.97 0 0 0 5.145 4H7.5V1.077zM4.09 4H2.255a7.025 7.025 0 0 1 3.072-2.472 6.7 6.7 0 0 0-.597.933c-.247.464-.462.98-.64 1.539zm-.582 3.5h-2.49c.062-.89.291-1.733.656-2.5H3.82a13.652 13.652 0 0 0-.312 2.5zM4.847 5H7.5v2.5H4.51A12.5 12.5 0 0 1 4.846 5zM8.5 5v2.5h2.99a12.495 12.495 0 0 0-.337-2.5H8.5zM4.51 8.5H7.5V11H4.847a12.5 12.5 0 0 1-.338-2.5zm3.99 0V11h2.653c.187-.765.306-1.608.338-2.5H8.5zM5.145 12H7.5v2.923c-.67-.204-1.335-.82-1.887-1.855A7.97 7.97 0 0 1 5.145 12zm.182 2.472a6.696 6.696 0 0 1-.597-.933A9.268 9.268 0 0 1 4.09 12H2.255a7.024 7.024 0 0 0 3.072 2.472zM3.82 11H1.674a6.958 6.958 0 0 1-.656-2.5h2.49c.03.877.138 1.718.312 2.5zm6.853 3.472A7.024 7.024 0 0 0 13.745 12H11.91a9.27 9.27 0 0 1-.64 1.539 6.688 6.688 0 0 1-.597.933zM8.5 12h2.355a7.967 7.967 0 0 1-.468 1.068c-.552 1.035-1.218 1.65-1.887 1.855V12zm3.68-1h2.146c.365-.767.594-1.61.656-2.5h-2.49a13.65 13.65 0 0 1-.312 2.5zm2.802-3.5h-2.49A13.65 13.65 0 0 0 12.18 5h2.146c.365.767.594 1.61.656 2.5zM11.27 2.461c.247.464.462.98.64 1.539h1.835a7.024 7.024 0 0 0-3.072-2.472c.218.284.418.598.597.933zM10.855 4H8.5V1.077c.67.204 1.335.82 1.887 1.855.173.324.33.682.468 1.068z"
               />
             </svg>
-            <span class="buttonText">Mission</span>
+            <span class="buttonText">Language</span>
           </a>
-        </p>
-        <!-- End mission div -->
-
-        <p>
-          <a
-            class="btn btn-primary"
-            data-toggle="collapse"
-            href="#collapseVision"
-            role="button"
-            aria-expanded="false"
-            aria-controls="collapseVision"
-          >
-            <svg
-              width="1.5em"
-              height="1.5em"
-              viewBox="0 0 16 16"
-              class="bi bi-flag MVbuttons"
-              fill="currentColor"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                fill-rule="evenodd"
-                d="M14.778.085A.5.5 0 0 1 15 .5V8a.5.5 0 0 1-.314.464L14.5 8l.186.464-.003.001-.006.003-.023.009a12.435 12.435 0 0 1-.397.15c-.264.095-.631.223-1.047.35-.816.252-1.879.523-2.71.523-.847 0-1.548-.28-2.158-.525l-.028-.01C7.68 8.71 7.14 8.5 6.5 8.5c-.7 0-1.638.23-2.437.477A19.626 19.626 0 0 0 3 9.342V15.5a.5.5 0 0 1-1 0V.5a.5.5 0 0 1 1 0v.282c.226-.079.496-.17.79-.26C4.606.272 5.67 0 6.5 0c.84 0 1.524.277 2.121.519l.043.018C9.286.788 9.828 1 10.5 1c.7 0 1.638-.23 2.437-.477a19.587 19.587 0 0 0 1.349-.476l.019-.007.004-.002h.001M14 1.221c-.22.078-.48.167-.766.255-.81.252-1.872.523-2.734.523-.886 0-1.592-.286-2.203-.534l-.008-.003C7.662 1.21 7.139 1 6.5 1c-.669 0-1.606.229-2.415.478A21.294 21.294 0 0 0 3 1.845v6.433c.22-.078.48-.167.766-.255C4.576 7.77 5.638 7.5 6.5 7.5c.847 0 1.548.28 2.158.525l.028.01C9.32 8.29 9.86 8.5 10.5 8.5c.668 0 1.606-.229 2.415-.478A21.317 21.317 0 0 0 14 7.655V1.222z"
-              />
-            </svg>
-            <span class="buttonText">Vision</span>
-          </a>
-        </p>
-        <!-- End vision div -->
-      </div>
-    </div>
-    <!-- Mission and Vision Text -->
-    <div class="collapse MVtext" id="collapseMission">
-      <div class="card card-body">
-        <b>Mission:</b>
-        "Facilitating the transmission of knowledge, values, and attitudes
-        through a transforming education based on the Word of God" .
+          <div class="dropdown-menu mt-0" aria-labelledby="dropdownMenuLink">
+            <a class="dropdown-item language" href="#">English</a>
+            <a class="dropdown-item language" href="#">Spanish</a>
+          </div>
+        </div>
       </div>
     </div>
 
-    <div class="collapse MVtext" id="collapseVision">
-      <div class="card card-body">
-        <b>Vision:</b> "To construct a Christian education model that transforms
-        all the lives that are involved and positively affects the community."
-      </div>
-    </div>
+    <div id="stripeDiv"></div>
 
-    <!-- End of collapse button text -->
-
-    <div class="row">
-      <div class="col" id="divStripe"></div>
-    </div>
     <hr />
     <div id="carouselContainer" class="container">
       <div class="row">
         <div class="col d-flex flex-wrap">
           <div
             id="CEEcarouselSlide"
-            class="carousel slide carousel-slide"
+            class="carousel slide carousel-fade"
             data-ride="carousel"
-            data-interval="9000"
+            data-interval="10000"
           >
             <div class="carousel-inner">
               <div class="carousel-item active">
@@ -346,7 +341,7 @@
                   alt="..."
                 />
                 <div class="carousel-caption d-none d-block">
-                  <h5 class="slide-caption">CEE School</h5>
+                  <h5 class="slide-caption">School</h5>
                 </div>
               </div>
               <div class="carousel-item">
@@ -356,7 +351,7 @@
                   alt="..."
                 />
                 <div class="carousel-caption d-none d-block">
-                  <h5 class="slide-caption">CEE High School</h5>
+                  <h5 class="slide-caption">High School</h5>
                 </div>
               </div>
             </div>
@@ -388,13 +383,78 @@
         </div>
       </div>
     </div>
+    <hr />
+    <div id="newsDiv" class="row d-flex justify-content-center">
+      <div class="col-sm-12 col-md-5">
+        <div id="Latest-News" class="row d-flex justify-content-center">
+          <span class="newsCaption mr-2">Latest <b>News</b></span
+          ><span
+            ><svg
+              width="2em"
+              height="2em"
+              viewBox="0 0 16 16"
+              class="bi bi-shield-exclamation"
+              fill="currentColor"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M5.443 1.991a60.17 60.17 0 0 0-2.725.802.454.454 0 0 0-.315.366C1.87 7.056 3.1 9.9 4.567 11.773c.736.94 1.533 1.636 2.197 2.093.333.228.626.394.857.5.116.053.21.089.282.11A.73.73 0 0 0 8 14.5c.007-.001.038-.005.097-.023.072-.022.166-.058.282-.111.23-.106.525-.272.857-.5a10.197 10.197 0 0 0 2.197-2.093C12.9 9.9 14.13 7.056 13.597 3.159a.454.454 0 0 0-.315-.366c-.626-.2-1.682-.526-2.725-.802C9.491 1.71 8.51 1.5 8 1.5c-.51 0-1.49.21-2.557.491zm-.256-.966C6.23.749 7.337.5 8 .5c.662 0 1.77.249 2.813.525a61.09 61.09 0 0 1 2.772.815c.528.168.926.623 1.003 1.184.573 4.197-.756 7.307-2.367 9.365a11.191 11.191 0 0 1-2.418 2.3 6.942 6.942 0 0 1-1.007.586c-.27.124-.558.225-.796.225s-.526-.101-.796-.225a6.908 6.908 0 0 1-1.007-.586 11.192 11.192 0 0 1-2.417-2.3C2.167 10.331.839 7.221 1.412 3.024A1.454 1.454 0 0 1 2.415 1.84a61.11 61.11 0 0 1 2.772-.815z"
+              />
+              <path
+                d="M7.002 11a1 1 0 1 1 2 0 1 1 0 0 1-2 0zM7.1 4.995a.905.905 0 1 1 1.8 0l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 4.995z"
+              /></svg
+          ></span>
+        </div>
+        <div class="row">
+          <div class="col-12">
+            <ul>
+              <li>We are completely online</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <!-- end lastest news -->
+      <div class="col-sm-12 col-md-5 ml-2">
+        <div id="Upcoming-Events" class="row d-flex justify-content-center">
+          <span class="newsCaption mr-2">Upcoming <b>Events</b></span
+          ><span
+            ><svg
+              width="2em"
+              height="2em"
+              viewBox="0 0 16 16"
+              class="bi bi-signpost"
+              fill="currentColor"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path d="M7 1.414V4h2V1.414a1 1 0 0 0-2 0z" />
+              <path
+                fill-rule="evenodd"
+                d="M12.532 5H2v4h10.532l1.666-2-1.666-2zM2 4a1 1 0 0 0-1 1v4a1 1 0 0 0 1 1h10.532a1 1 0 0 0 .768-.36l1.933-2.32a.5.5 0 0 0 0-.64L13.3 4.36a1 1 0 0 0-.768-.36H2z"
+              />
+              <path d="M7 10h2v6H7v-6z" /></svg
+          ></span>
+        </div>
+        <div class="row">
+          <div class="col-12">
+            <ul>
+              <li>December</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <!-- end upcoming events -->
+    </div>
+    <!-- end of newsDiv -->
 
     <hr />
-    <div class="container">
+    <div id="iconsDiv" class="container">
       <div class="row">
         <div id="school-calendar" class="col-md-3 d-flex border p-2 iconDiv">
           <a class="iconLink" href="https://ceehonduras.org/calendar-p73.php">
-            <div class="d-flex flex-md-column">
+            <div
+              class="d-flex flex-md-column flex-sm-row justify-content-center"
+            >
               <svg
                 class="iconOP"
                 width="2em"
@@ -413,13 +473,15 @@
                 />
               </svg>
               <h5 class="iconsText">School Calendar</h5>
-            </div></a
-          >
+            </div>
+          </a>
         </div>
 
         <div id="CEE-Library" class="col-md-3 d-flex border p-2 iconDiv">
           <a class="iconLink" href="https://ceehonduras.org/calendar-p73.php">
-            <div class="d-flex flex-md-column">
+            <div
+              class="d-flex flex-md-column flex-sm-row justify-content-center"
+            >
               <svg
                 class="iconOP"
                 width="2em"
@@ -448,7 +510,7 @@
           class="col-md-3 d-flex flex-md-column border p-2 iconDiv"
         >
           <a class="iconLink" href="https://ceehonduras.org/calendar-p73.php">
-            <div class="d-flex flex-md-column">
+            <div class="d-flex flex-md-column justify-content-center">
               <svg
                 class="iconOP"
                 width="2em"
@@ -470,7 +532,7 @@
 
         <div id="code-of-conduct" class="col-md-3 border p-2 iconDiv">
           <a class="iconLink" href="https://ceehonduras.org/calendar-p73.php">
-            <div class="d-flex flex-md-column">
+            <div class="d-flex flex-md-column justify-content-center">
               <svg
                 class="iconOP"
                 width="2em"
@@ -495,57 +557,96 @@
             </div>
           </a>
         </div>
+      </div>
+    </div>
+    <!-- <hr /> -->
 
-        <div
-          id="schedule"
-          class="col-md-3 d-flex flex-md-column border p-2 iconDiv"
+    <!-- mission and vision division -->
+    <div class="row">
+      <div class="col">
+        <p
+          id="mission"
+          class="missionANDvision d-flex justify-content-center mt-4 mb-1"
         >
-          <a class="iconLink" href="https://ceehonduras.org/calendar-p73.php">
-            <div class="d-flex flex-md-column">
-              <svg
-                class="iconOP"
-                width="2em"
-                height="2em"
-                viewBox="0 0 16 16"
-                class="bi bi-clock"
-                fill="currentColor"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  fill-rule="evenodd"
-                  d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14zm8-7A8 8 0 1 1 0 8a8 8 0 0 1 16 0z"
-                />
-                <path
-                  fill-rule="evenodd"
-                  d="M7.5 3a.5.5 0 0 1 .5.5v5.21l3.248 1.856a.5.5 0 0 1-.496.868l-3.5-2A.5.5 0 0 1 7 9V3.5a.5.5 0 0 1 .5-.5z"
-                />
-              </svg>
-              <h5 class="iconsText">Schedule</h5>
-            </div>
-          </a>
+          <span class="buttonText"><b>Mission</b></span>
+          <svg
+            width="1.5em"
+            height="1.5em"
+            viewBox="0 0 16 16"
+            class="bi bi-bookmark-check MVbuttons"
+            fill="currentColor"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M2 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v13.5a.5.5 0 0 1-.777.416L8 13.101l-5.223 2.815A.5.5 0 0 1 2 15.5V2zm2-1a1 1 0 0 0-1 1v12.566l4.723-2.482a.5.5 0 0 1 .554 0L13 14.566V2a1 1 0 0 0-1-1H4z"
+            />
+            <path
+              fill-rule="evenodd"
+              d="M10.854 5.146a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7.5 7.793l2.646-2.647a.5.5 0 0 1 .708 0z"
+            />
+          </svg>
+        </p>
+        <div class="border mission-vision-text d-flex justify-content-center">
+          "Facilitating the transmission of knowledge, values, and attitudes
+          through a transforming education based on the Word of God" .
+        </div>
+        <!-- para vision -->
+        <p
+          id="vision"
+          class="missionANDvision d-flex justify-content-center mt-1 mb-1"
+        >
+          <span class="buttonText"><b>Vision</b></span>
+          <svg
+            width="1.5em"
+            height="1.5em"
+            viewBox="0 0 16 16"
+            class="bi bi-flag MVbuttons"
+            fill="currentColor"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M14.778.085A.5.5 0 0 1 15 .5V8a.5.5 0 0 1-.314.464L14.5 8l.186.464-.003.001-.006.003-.023.009a12.435 12.435 0 0 1-.397.15c-.264.095-.631.223-1.047.35-.816.252-1.879.523-2.71.523-.847 0-1.548-.28-2.158-.525l-.028-.01C7.68 8.71 7.14 8.5 6.5 8.5c-.7 0-1.638.23-2.437.477A19.626 19.626 0 0 0 3 9.342V15.5a.5.5 0 0 1-1 0V.5a.5.5 0 0 1 1 0v.282c.226-.079.496-.17.79-.26C4.606.272 5.67 0 6.5 0c.84 0 1.524.277 2.121.519l.043.018C9.286.788 9.828 1 10.5 1c.7 0 1.638-.23 2.437-.477a19.587 19.587 0 0 0 1.349-.476l.019-.007.004-.002h.001M14 1.221c-.22.078-.48.167-.766.255-.81.252-1.872.523-2.734.523-.886 0-1.592-.286-2.203-.534l-.008-.003C7.662 1.21 7.139 1 6.5 1c-.669 0-1.606.229-2.415.478A21.294 21.294 0 0 0 3 1.845v6.433c.22-.078.48-.167.766-.255C4.576 7.77 5.638 7.5 6.5 7.5c.847 0 1.548.28 2.158.525l.028.01C9.32 8.29 9.86 8.5 10.5 8.5c.668 0 1.606-.229 2.415-.478A21.317 21.317 0 0 0 14 7.655V1.222z"
+            />
+          </svg>
+        </p>
+        <div class="border mission-vision-text d-flex justify-content-center">
+          "To construct a Christian education model that transforms all the
+          lives that are involved and positively affects the community."
         </div>
       </div>
     </div>
-    <br />
-    <div id="socialMedia">
-      <a
-        target="_blank"
-        href="https://www.facebook.com/Comunidad-Educativa-Evangelica-Siguatepeque-Bilingual-Christian-School-111115888976547"
-        class="fa fa-facebook-square"
-        style="font-size: 48px; color: #1877f2"
-      ></a>
-      <a
-        target="_blank"
-        href="https://twitter.com/ceehonduras"
-        class="fa fa-twitter-square"
-        style="font-size: 48px; color: #1da1f2"
-      ></a>
-      <a
-        target="_blank"
-        href="https://www.youtube.com/user/CEEHonduras"
-        class="fa fa-youtube-square"
-        style="font-size: 48px; color: #ff0000"
-      ></a>
+
+    <hr />
+    <div id="socialMediaDiv">
+      <div id="socialMedia" class="ml-4 p-2">
+        <a
+          target="_blank"
+          href="https://www.facebook.com/Comunidad-Educativa-Evangelica-Siguatepeque-Bilingual-Christian-School-111115888976547"
+          class="fa fa-facebook-square"
+          style="font-size: 48px; color: lightgray"
+        ></a>
+        <a
+          target="_blank"
+          href="https://twitter.com/ceehonduras"
+          class="fa fa-twitter-square"
+          style="font-size: 48px; color: lightgray"
+        ></a>
+        <a
+          target="_blank"
+          href="https://www.youtube.com/user/CEEHonduras"
+          class="fa fa-youtube-square"
+          style="font-size: 48px; color: lightgray"
+        ></a>
+      </div>
+      <br />
+      <br />
+      <br />
+      <hr />
+      <p style="font-size: 0.7em" class="d-flex ml-2">
+        Copyright &copy; 2020 CEE Honduras. All rights reserved
+      </p>
     </div>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->

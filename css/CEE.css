@@ -60,6 +60,10 @@
     border-radius: 5px;
   }
 }
+#LogoDiv {
+  border-radius: 0px 0px 5px;
+}
+
 #stripeDiv {
   background-color: yellowgreen;
   width: 100%;
@@ -74,9 +78,16 @@
   background-color: black;
 }
 
+@media screen and (max-width: 375px) {
+  svg.iconOP {
+    margin-left: 23%;
+    margin-right: 1em;
+  }
+}
 @media screen and (max-width: 768px) {
-  .iconsText {
-    margin-left: 2em;
+  .iconOP {
+    margin-left: 30%;
+    margin-right: 2em;
   }
 }
 @media screen and (min-width: 768px) {
@@ -89,10 +100,17 @@
   }
 }
 .iconsText {
-  color: yellowgreen;
+  color: green;
 }
 .iconsText:hover {
+  color: yellowgreen;
+}
+
+.iconsText2 {
   color: green;
+}
+.iconsText2:hover {
+  color: yellowgreen;
 }
 
 .iconOP {
@@ -141,10 +159,6 @@
     margin-bottom: 0;
     margin-top: 0em;
   }
-
-  .buttonText {
-    font-size: 0.8em;
-  }
 }
 @media screen and (min-width: 800px) {
   #CEEcarouselSlide {
@@ -159,10 +173,6 @@
   }
 }
 @media screen and (max-width: 300px) {
-  .MVbuttons {
-    display: none;
-  }
-
   #stripeDiv {
     margin-top: 0em;
   }
@@ -231,6 +241,48 @@
 
 .newsCaption {
   font-size: 1.2em;
+}
+
+.mission-vision-text {
+  color: black;
+  font-weight: bold;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+
+.months {
+  font-size: 1.3em;
+  color: brown;
+}
+
+.monthNews {
+  font-weight: 500;
+  color: saddlebrown;
+}
+
+.upcoming-events-list {
+  margin-top: 1em;
+}
+
+.latestNews {
+  font-weight: 500;
+  color: saddlebrown;
+  font-size: 1.1em;
+}
+
+.latest-news-list {
+  margin-top: 1em;
+}
+
+.mission-vision-titles {
+  font-size: 1.5em;
+  color: yellowgreen;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+
+#stripeDiv2 {
+  background-color: #3b3636;
+  width: 100%;
+  height: 1em;
 }
 
 /*# sourceMappingURL=CEE.css.map */

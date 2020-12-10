@@ -214,6 +214,10 @@
   background-color: gray;
   height: 15em;
 }
+#socialMediaDivContactUs {
+  background-color: white;
+  height: 7em;
+}
 
 .navbar {
   background-color: green;
@@ -251,7 +255,7 @@
 .mission-vision-text {
   color: black;
   font-weight: bold;
-  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
 .months {
@@ -281,7 +285,7 @@
 .mission-vision-titles {
   font-size: 1.5em;
   color: yellowgreen;
-  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
 #stripeDiv2 {
@@ -311,11 +315,6 @@
 
 .SMiconCU {
   font-size: 3em;
-}
-
-#socialMediaDivContactUs {
-  background-color: white;
-  height: 7em;
 }
 
 /*# sourceMappingURL=CEE.css.map */

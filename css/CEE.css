@@ -205,6 +205,11 @@
   background-color: gray;
 }
 
+#socialMediaDivMain {
+  background-color: gray;
+  height: 20em;
+}
+
 #socialMediaDiv {
   background-color: gray;
   height: 15em;
@@ -283,6 +288,34 @@
   background-color: #3b3636;
   width: 100%;
   height: 1em;
+}
+
+#WeatherDiv {
+  font-size: 0.7em;
+}
+
+/* POTENTIAL TEACHERS SECTION */
+#required-documents {
+  color: maroon;
+}
+
+#potential-Teachers {
+  color: brown;
+}
+
+/* CONTACT US SECTION */
+#contact-Us-header {
+  font-size: 2em;
+  color: maroon;
+}
+
+.SMicon {
+  font-size: 2.5em;
+}
+
+#socialMediaDivContactUs {
+  background-color: white;
+  height: 7em;
 }
 
 /*# sourceMappingURL=CEE.css.map */
